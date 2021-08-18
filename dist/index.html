@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe | by Guilherme Ferreira</title>
+</head>
+
+<body>
+    <div class="gameScreen">
+        <div class="splashScreen">
+            <div class="splashElements">
+                <h1 class="title centerText">Tic Tac Toe</h1>
+                <h2 class="subTitle centerText">The Four<br>Elements Edition</h2>
+                <div id="startGame" class="button">Start Game</div>
+            </div>
+        </div>
+        <div class="playerSelect">
+            <h3 id="playerChoose" class="chooseTitle centerText">PLAYER 1</h3>
+            <h3  class="chooseTitle centerText">Choose your element:</h3>
+            <div class="elementGrid">
+                <img id="air-element" src="./assets/elements/air.png" alt="Air Element" class="elementSizing">
+                <img id="earth-element" src="./assets/elements/earth.png" alt="Earth Element" class="elementSizing">
+                <img id="fire-element" src="./assets/elements/fire.png" alt="Fire Element" class="elementSizing">
+                <img id="water-element" src="./assets/elements/water.png" alt="Water Element" class="elementSizing">
+            </div>
+        </div>
+        <div class="game">
+            <div class="scoreBoard">
+                <div id="p1e"></div>
+                <div id="p1s" class="score">0</div>
+                <div class="vs">VS</div>
+                <div id="p2s" class="score">0</div>
+                <div id="p2e"></div>
+            </div>
+            <div class="stage">
+                <div id="0" class="circle"></div>
+                <div id="1" class="circle"></div>
+                <div id="2" class="circle"></div>
+                <div id="3" class="circle"></div>
+                <div id="4" class="circle"></div>
+                <div id="5" class="circle"></div>
+                <div id="6" class="circle"></div>
+                <div id="7" class="circle"></div>
+                <div id="8" class="circle"></div>
+            </div>
+            <div class="controlPanel">
+                <div id="resetScore" class="button">Reset Score</div>
+                <div id="resetGame" class="button">Clear Board</div>
+                <div id="changeElements" class="button">Change Elements</div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">Created by <a href="https://github.com/guilhermerera" target="_blank">Guilherme Ferreira</a></footer>
+</body>
+<script src="./script/rules.js"></script>
+<script src="./script/interface.js"></script>
+</html>

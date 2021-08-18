@@ -1,0 +1,357 @@
+/* STYLE GUIDE
+font-family: 'Fredoka One', cursive;
+font-family: 'Raleway', sans-serif;
+#8FBFB2
+#F2B035
+#D97B29
+#D93D3D
+#0D0D0D */
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes transitionOut {
+    0% {
+        filter: blur(0px) opacity(1);
+    }
+    100% {
+        filter: blur(10px) opacity(0);
+        z-index: -2;
+    }
+}
+
+@keyframes transitionIn {
+    0% { 
+        filter: blur(10px) opacity(0);
+    }
+    100% {
+        filter: blur(0px) opacity(1);
+        z-index: 5;
+    }
+}
+
+@-webkit-keyframes float {
+    0% {
+        left: 0px
+    }
+
+    25% {
+        left: 2px
+    }
+
+    75% {
+        left: -2px
+    }
+
+    100% {
+        left: 0px
+    }
+}
+
+@keyframes float {
+    0% {
+        left: 0px
+    }
+
+    25% {
+        left: 2px
+    }
+
+    75% {
+        left: -2px
+    }
+
+    100% {
+        left: 0px
+    }
+}
+
+body {
+    background: #F2B035;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.gameScreen {
+    position: relative;
+    margin: auto;
+    min-width: 375px;
+    height: calc(100% - 24px);
+    overflow: hidden;
+    background: #F2B035;
+}
+
+.centerText {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #D97B29;
+    color: #f1c40f;
+    text-align: center;
+    background: #D93D3D;
+    font-family: 'Fredoka One', cursive;
+    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 300ms ease-in-out, color 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-position: 0;
+    color: #0D0D0D;
+}
+
+.button:active {
+    border-color: #D93D3D;
+}
+
+.splashScreen {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 200px 10px;
+    background: #D97B29;
+}
+
+.splashElements {
+    margin: auto;
+    height: 352px;
+    width: 352px;
+    padding: 85px 0px;
+    background-image: url(../assets/elements/4elements_alpha.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    color: #0D0D0D;
+}
+
+.subTitle {
+    padding: 8px 12px;
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    color: #0D0D0D;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+#startGame {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.playerSelect {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 200px 10px;
+    background: #f1c40f;
+    z-index: -1;
+}
+
+.chooseTitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+
+.elementGrid {
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template: 100px 100px / 100px 100px;
+    gap: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.elementSizing {
+    position: relative;
+    width: 100px;
+}
+
+.elementSizing:hover {
+    -webkit-animation: float 1s infinite;
+    animation: float .75s infinite;
+    cursor: pointer;
+}
+
+.stage {
+    margin: 15px auto;
+    padding: 10px;
+    display: grid;
+    grid-template: 100px 100px 100px / 100px 100px 100px;
+    gap: 4px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.circle {
+    text-align: center;
+    background: beige;
+    border: 1px solid gray;
+    border-radius: 3px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.game {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 200px 10px;
+    background: #f1c40f;
+    z-index: -1;
+}
+
+.scoreBoard {
+    margin-top: 15px;
+
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.controlPanel {
+    margin: auto;
+    width: 375px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.controlPanel .button {
+    margin: auto;
+    padding: 5px 5px;
+}
+
+.scoreBoard {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.scoreElement {
+    margin: 0px;
+    padding: 0px;
+    width: 50px;
+    position: relative;
+    top: -10px;
+}
+
+.score {
+    margin: 0px 10px;
+    padding: 10px;
+    background: beige;
+    min-width: 40px;
+    max-height: 50px;
+    text-align: center;
+    border: 1px solid #0D0D0D;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.vs {
+    margin: 0px 10px;
+    padding: 10px 0px;
+}
+
+#p2e,
+#p1e {
+    padding: 10px;
+}
+
+.air:after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background-image: url(../assets/elements/air.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.earth:after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background-image: url(../assets/elements/earth.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fire:after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background-image: url(../assets/elements/fire.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.water:after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background-image: url(../assets/elements/water.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+}
