@@ -1,6 +1,6 @@
 # ✔️ Tic Tac Toe: The Four Elements Edition
 ## Project created for the ProgramadorBR's WebDev FullStack course.
-### Project/Challange proposal: To create a Tic Tac Toe game using HTML and pure CSS and JavaScript. No frameworks were used in this project
+### Project/Challange proposal: To create a Tic Tac Toe game using HTML, CSS and JavaScript. No frameworks were used in this project
 
 <br><br>
 
